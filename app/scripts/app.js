@@ -1,5 +1,5 @@
 (function() {
-  function config($locationProvider, $stateProvider) {
+  function config($stateProvider, $locationProvider) {
     $locationProvider
       .html5Mode({
         enabled: true,
@@ -15,6 +15,6 @@
   }
 
   angular
-    .module('blocChat', ['ui.router', 'firebase', 'ui.bootstrap'])
+    .module('blocChat', ['ui.router', 'firebase', 'ui.bootstrap', 'ngCookies'])
     .config(config);
 })();
