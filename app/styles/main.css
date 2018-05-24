@@ -51,15 +51,12 @@ body {
 
 /*Messages*/
 
-.messages {
-  position: fixed;
-  top: 0px;
-  left: 300px;
-  width: 80%;
-  height: 100%;
-  background-color: white;
-  z-index: 1;
-  overflow: scroll;
+.messages-container {
+margin-left: 200px;
+}
+
+.message{
+  
 }
 
 .messages-body {

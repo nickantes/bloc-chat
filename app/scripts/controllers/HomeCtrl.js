@@ -13,8 +13,11 @@
     }
 
     home.setCurrentRoom = function(room) {
+      console.log("setting currentRoom");
+      console.log(room)
       home.currentRoom = room;
       home.messages = Message.getByRoomId(home.currentRoom.$id);
+      console.log(home.message);
     }
 
   }

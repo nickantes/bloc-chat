@@ -1,3 +1,4 @@
+
 <div class="sidebar">
   <div class="sidebar-header">
     <h1 class="sidebar-title">Bloc Chat</h1>
@@ -8,11 +9,11 @@
   </div>
 </div>
 
-<div class="messages">
+<div class="messages-container">
   <div class="messages-header">
     <h3>{{ home.currentRoom.name }}</h3>
   </div>
-  <div class="messages-body" ng-repeat="message in home.messages">
+  <div class="message" ng-repeat="message in home.messages">
     <div class="username">{{ message.username }}</div>
     <div class="timestamp">{{ message.sentAt }}</div>
     <div class="user-message">{{ message.content }}</div>
