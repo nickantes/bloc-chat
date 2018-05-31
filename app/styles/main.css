@@ -15,7 +15,7 @@ body {
   position: fixed;
   top: 0px;
   left: 0px;
-  width: 20%;
+  width: 15%;
   height: 100%;
   color: orange;
   background-color: gray;
@@ -52,11 +52,16 @@ body {
 /*Messages*/
 
 .messages-container {
-margin-left: 200px;
+margin-left: 250px;
 }
 
 .message{
-  
+margin-left: 200px;
+}
+
+.messages-header{
+  margin-left: 500px;
+
 }
 
 .messages-body {

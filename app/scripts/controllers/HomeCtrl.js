@@ -17,7 +17,7 @@
       console.log(room)
       home.currentRoom = room;
       home.messages = Message.getByRoomId(home.currentRoom.$id);
-      console.log(home.message);
+      console.log(home.messages);
     }
 
   }
