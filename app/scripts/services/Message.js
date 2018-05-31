@@ -1,16 +1,21 @@
 (function() {
     function Message($firebaseArray) {
-      var Message = {};
+        var Message = {};
 
-        var ref = firebase.database().ref().child("Messages");
+        var ref = firebase.database().ref().child("messages");
         var messages = $firebaseArray(ref);
+        Message.all = messages;
 
-        return {
-            getByRoomId: function(roomId) {
-              console.log(roomId)
-                return $firebaseArray(ref.orderByChild("roomId").equalTo(roomId));
-            }
-        };
+        Message.getByRoomId = function (roomId) {
+            return $firebaseArray(ref.orderByChild('roomId').equalTo(roomId));
+        }
+
+        Message.send = function (newMessage) {
+            messages.$add(newMessage);
+            newMessage.sentAt = firebase.database.ServerValue.TIMESTAMP;
+        }
+
+        return Message;
     }
 
     angular
